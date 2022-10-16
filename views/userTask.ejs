@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<!--====form section start====-->
+<div class="user-detail">
+    <h2>Create User Data</h2>
+    <form action="/task" method="POST">
+          <label>Full Name</label>
+          <select name="uname" id="">
+            <option >Select Option</option>
+
+            <% if(data.length > 0){ %>
+            <% data.forEach(function(user){ %>
+            <option value="<%= user.fullName %>" name="uname"><%= user.fullName %></option>
+            <% }) %>
+            <% } %>
+
+
+           </select>
+          <label>Task Name</label>
+          <input type="text" placeholder="Enter Task Name" name="task" required>
+          <label>Task Type</label>
+          
+           <select name="taskstate" id="">
+
+            <option value="Pending" name="Pending">Pending</option>
+            <option value="Done" name="Done">Done</option>
+            
+
+           </select>
+          <button type="submit">Submit</button>
+          <div class="dropdown">
+           
+          </div>
+         
+        </div>
+</div>
+<!--====form section start====-->
+</body>
+</html>

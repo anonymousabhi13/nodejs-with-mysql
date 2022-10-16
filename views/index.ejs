@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+<!--====form section start====-->
+<div class="user-detail">
+    <h2>Create User Data</h2>
+    <form action="/create" method="POST">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter Full Name" name="fullName" required>
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter Email Address" name="emailAddress" required>
+          <label>mobile</label>
+          <input type="number" placeholder="Enter mobile" name="mobile" required>
+         
+          <button type="submit">Submit</button>
+        </form>
+        <a href="/createsheet"><button>Create Excel Sheet</button></a>
+</div>
+<!-- ====form section start==== -->
+</body>
+</html>
